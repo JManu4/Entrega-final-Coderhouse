@@ -1,0 +1,66 @@
+.educationContainer {
+    color: white;
+    font-family: $fontMain;
+    display: flex;
+    h3 {
+        @include subtittles;
+    }
+    .educationCerts {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .educationSchool {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .educationCards {
+        width: 80%;
+        padding: 2.5rem 1rem;
+        margin-block: 1rem;
+        .educationCardsTittle {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    }
+    .educationCardRed {
+        background: linear-gradient($redMain,rgba(157, 0, 0, 0.926));
+    }
+    .educationCardBlack {
+        background: linear-gradient(rgb(35, 61, 62),rgb(10, 24, 25));
+        
+        .avance {
+            background: rgba(255,255,255,0.1);
+            position: relative;
+            height: 10px;
+            width: 100%;
+            .avanceValueRH, .avanceValueWD {
+                position: absolute;
+                background-color: $redMain;
+                height: 10px;
+                width: 0;
+            }
+            .avanceValueRH {
+                animation: loadRH 4s forwards;
+            }
+            .avanceValueWD{
+                animation: loadWD 4s forwards;
+            }
+            @keyframes loadRH {
+                0% { width: 0; }
+                100% { width: 80%; }
+            }
+            @keyframes loadWD {
+                0% { width: 0; }
+                100% { width: 29%; }
+            }
+        }
+    }
+    @media (max-width: 575px) {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

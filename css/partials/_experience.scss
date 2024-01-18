@@ -1,0 +1,229 @@
+// Inicia experience_summary
+.experienceSummary {
+    color: white;
+    background-color: $blackMain;
+    padding-block: 4rem;
+    font-family: $fontMain;
+    .experienceSummaryContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        grid-template-areas:
+        "experienceSummaryCard1 experienceSummaryCard2 experienceSummaryCard3"
+        "experienceSummaryCard1 experienceSummaryCard4 experienceSummaryCard5"
+        ;
+        .experienceSummaryCard {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(10, 24, 25);
+
+            .experienceSummaryCardsYear {
+                color: $redMain;
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 0;
+                padding-top: 1rem;
+            }
+            .experienceSummaryCardsTx {
+                margin-bottom: 0;
+                text-align: center;
+                padding-bottom: 1rem;
+                padding-inline: 4rem;
+            }
+        }
+        .experienceSummaryCard1 {
+            grid-area: experienceSummaryCard1;
+            background-color: transparent;
+            .experienceSummaryCard1Year {
+                color: $redMain;
+                font-size: 6rem;
+                margin-bottom: 0;
+                font-weight: bold;
+            }
+            .experienceSummaryCard1Tx {
+                font-weight: bold;
+            }
+        }
+        @for $var2 from 2 through 5 {
+            .experienceSummaryCard#{$var2} { 
+                grid-area: experienceSummaryCard#{$var2}; 
+            }
+        }
+        @media (max-width: 767px){
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+            ".                      experienceSummaryCard2"
+            "experienceSummaryCard1 experienceSummaryCard3"
+            "experienceSummaryCard1 experienceSummaryCard4"
+            ".                      experienceSummaryCard5"
+            ;
+        }
+        @media (max-width: 450px){
+            display: flex;
+            flex-direction: column;
+            --bs-gutter-x: 0;
+            padding-inline: 2rem;
+        }
+
+    }
+}
+// Fin experience_summary
+
+
+// Inicia experience
+.experienceSection {
+    color: white;
+    background-color: $blackMain;
+    font-family: $fontMain;
+    padding-block: 4rem;
+    h3 {
+        @include subtittles;
+    }
+    .experienceContainer {
+        padding-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        .experienceImage {
+            flex: 1;
+            img {
+                width: 100%;
+                margin: 3rem 0 0 3rem;
+                border: 3px solid $primaryNeon;
+                box-shadow: -10px -10px 0 -3px $background, -10px -10px $greenNeon,
+                      -20px -20px 0 -3px $background, -20px -20px $yellowNeon,
+                      -30px -30px 0 -3px $background, -30px -30px $orangeNeon,
+                      -40px -40px 0 -3px $background, -40px -40px $redNeon;
+                &:hover {
+                animation: shadowWave 1s ease infinite alternate;
+                }
+            }
+            @keyframes shadowWave {
+                0% {
+                  border: 3px solid $primaryNeon;
+                  box-shadow: -10px -10px 0 -3px $background, -10px -10px $greenNeon,
+                    -20px -20px 0 -3px $background, -20px -20px $yellowNeon,
+                    -30px -30px 0 -3px $background, -30px -30px $orangeNeon,
+                    -40px -40px 0 -3px $background, -40px -40px $redNeon;
+                }
+                25% {
+                  border: 3px solid $redNeon;
+                  box-shadow: -10px -10px 0 -3px $background, -10px -10px $primaryNeon,
+                    -20px -20px 0 -3px $background, -20px -20px $greenNeon,
+                    -30px -30px 0 -3px $background, -30px -30px $yellowNeon,
+                    -40px -40px 0 -3px $background, -40px -40px $orangeNeon;
+                }
+                50% {
+                  border: 3px solid $orangeNeon;
+                  box-shadow: -10px -10px 0 -3px $background, -10px -10px $redNeon,
+                    -20px -20px 0 -3px $background, -20px -20px $primaryNeon,
+                    -30px -30px 0 -3px $background, -30px -30px $greenNeon,
+                    -40px -40px 0 -3px $background, -40px -40px $yellowNeon;
+                }
+                75% {
+                  border: 3px solid $yellowNeon;
+                  box-shadow: -10px -10px 0 -3px $background, -10px -10px $orangeNeon,
+                    -20px -20px 0 -3px $background, -20px -20px $redNeon,
+                    -30px -30px 0 -3px $background, -30px -30px $primaryNeon,
+                    -40px -40px 0 -3px $background, -40px -40px $greenNeon;
+                }
+                100% {
+                  border: 3px solid $greenNeon;
+                  box-shadow: -10px -10px 0 -3px $background, -10px -10px $yellowNeon,
+                    -20px -20px 0 -3px $background, -20px -20px $orangeNeon,
+                    -30px -30px 0 -3px $background, -30px -30px $redNeon,
+                    -40px -40px 0 -3px $background, -40px -40px $primaryNeon;
+                }
+            }
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+        .experienceCards {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .experienceCardJobs {
+                padding: 0.5rem 1rem 0;
+                background-color: rgb(10, 24, 25);
+                border-radius: 10px;
+                position: relative;
+                h4 {
+                    color: $redMain;
+                    .spanBlanco{ color: white; }
+                }
+                .experienceCardDates{
+                    position: absolute;
+                    background-color: rgb(10, 24, 25);
+                    border: 3px solid $primaryNeon;
+                    border-radius: 8px;
+                    padding: 0.3rem 1rem;
+                    right: -20px;
+                    top: -10px;
+                    opacity: 0;
+
+                    @media (max-width: 991px) {
+                        border: 1px solid $primaryNeon;
+                        padding: 0.1rem 0.8rem;
+                        top: -22px;
+                        right: 0;
+                    }
+                }
+                .arrowDown {
+                    color: $redMain;
+                    margin-left: 0.5rem;
+                    animation: turnOnRed infinite alternate 1s ;
+                }
+                .arrowUp {
+                    color: rgb(134, 134, 234);
+                    margin-left: 0.5rem;
+                    opacity: 0;
+                }
+                input, .experienceCardJobsInfoActivities {
+                    display: none;
+                }
+                label {
+                    position: relative;
+                    display: block;
+                    cursor: pointer;
+                    padding-bottom: 0.5rem;
+                }
+                input:checked ~ .experienceCardJobsInfoActivities {
+                    display: block;
+                }
+                input:checked ~ label > .arrowDown {
+                    display: none;
+                    animation: none;
+                }
+                input:checked ~ label > .arrowUp {
+                    animation: turnOnBlue infinite alternate 1s;
+                }
+                @keyframes turnOnBlue {
+                    0% { opacity: 0; }
+                    100%{ opacity: 1; color: rgb(134, 134, 234); }
+                }
+
+
+                input:checked ~ .experienceCardDates {
+                    animation: showUpDates 1s forwards 0.5s;
+                }
+                @keyframes showUpDates {
+                    0% { transform: scale(0.5); opacity: 0; }
+                    50% { transform: scale(1.2); opacity: 0.5; }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+                ul {
+                    text-align: justify;
+                    color: pink;
+                    list-style-type: square;
+                }
+            }
+        }
+        @media (max-width: 575px) { padding-inline: 2rem; }
+    }
+}
+/* fin 7_experience */

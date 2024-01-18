@@ -1,0 +1,28 @@
+.mayorQue1, .mayorQue2, .mayorQue3 {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    padding: 4rem;
+}
+.mayorQue1 {
+    background: linear-gradient($blackMain,black);
+    &:hover {
+        color: $redMain;
+        font-style: italic;
+    }
+}
+.mayorQue2 {
+    background-color: black;
+    &:hover {
+        color: $redMain;
+        font-style: italic;
+    }
+}
+.mayorQue3 {
+    background: linear-gradient(black,$blackMain);
+    margin-bottom: 0;
+    &:hover {
+        color: $redMain;
+        font-style: italic;
+    }
+}

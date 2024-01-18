@@ -1,0 +1,83 @@
+// Inicia skilss
+.skills {
+    background-color: $blackMain;
+    color: white;
+    font-family: $fontMain;
+    padding-block: 4rem;
+    h3 {
+        @include subtittles;
+    }
+    .skillsCards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 2rem;
+        column-gap: 3rem;
+        grid-template-areas: 
+        "skillsCard1 skillsCard2  skillsCard3  skillsCard4"
+        "skillsCard5 skillsCard6  skillsCard7  skillsCard8"
+        "skillsCard9 skillsCard10 skillsCard11 skillsCard12"
+        ".           skillsCard13 skillsCard14 ."
+        ;
+        @for $var from 1 through 14 {
+            .skillsCard#{$var} {
+                grid-area: skillsCard#{$var};
+            }
+        }
+        .skillsCard {
+            padding: 1.5rem 1rem;
+            p { margin-bottom: 0; }
+        }
+        @media (max-width: 767px){
+            gap: 1rem;
+        }
+        @media (max-width: 666px){
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(7, 1fr);
+            grid-template-areas: 
+            "skillsCard1 skillsCard2"
+            "skillsCard3 skillsCard4"
+            "skillsCard5 skillsCard6"
+            "skillsCard7 skillsCard8"
+            "skillsCard9 skillsCard10"
+            "skillsCard11 skillsCard12"
+            "skillsCard13 skillsCard14"
+            ;
+        }
+        .skillsCardRed {
+            background: linear-gradient($redMain,rgba(119, 26, 26, 0.926));
+        }
+        .skillsCardBlack {
+            background: linear-gradient(rgb(35, 61, 62),rgb(10, 24, 25));
+        }
+    }
+}
+// Fin skills
+
+// Inicia soft_skills
+.softSkills {
+    color: white;
+    font-family: $fontMain;  
+    padding-block: 4rem;
+    h3 { 
+        @include subtittles;
+    }
+    .softSkillsCards {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        .softSkillsCard {
+            padding: 1rem 1rem;
+            margin-bottom: 1rem; 
+        }
+        .skillsCardRed {
+            background: linear-gradient($redMain,rgba(119, 26, 26, 0.926));
+            border-radius: 8px;
+        }
+        .skillsCardBlack {
+            background: linear-gradient(rgb(35, 61, 62),rgb(10, 24, 25));
+            border-radius: 8px;
+        }
+    }
+}
+// Fin soft_skills

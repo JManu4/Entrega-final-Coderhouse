@@ -1,0 +1,20 @@
+$redMain: rgb(181, 41, 41);
+$blackMain: rgba(20, 38, 39, 0.926);
+$fontMain: 'Urbanist', sans-serif;
+
+$primaryNeon: #22D2A0;
+$secondaryNeon: #192824;
+$background: $blackMain;
+$greenNeon: #1FC11B;
+$yellowNeon: #FFD913;
+$orangeNeon: #FF9C55;
+$redNeon: #FF5555;
+
+
+
+
+@mixin subtittles {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}

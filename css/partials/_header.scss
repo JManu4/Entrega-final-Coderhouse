@@ -1,0 +1,26 @@
+.navbar {
+    justify-content: end;
+    background-color: black;
+    --bs-navbar-nav-link-padding-x: 1.5rem;
+    .navBarMenu {
+        text-align: end;
+        font-family: $fontMain;  
+        padding-right: 1rem;
+        gap: 4rem;
+    
+        .nav-link{
+            color: white;
+            &:hover{
+                color: $redMain;
+                font-weight: bold;
+            }
+        }
+        .actual {
+            font-weight: bold;
+            border-bottom: 1px solid $redMain;
+        }
+        .navbar-toggler {
+            background-color: rgba(128, 128, 128, 0.653);
+        }
+    }
+}
