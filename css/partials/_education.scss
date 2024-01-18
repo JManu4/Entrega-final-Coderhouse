@@ -3,7 +3,7 @@
     font-family: $fontMain;
     display: flex;
     h3 {
-        @include subtittles;
+        @include subtitles;
     }
     .educationCerts {
         flex: 1;

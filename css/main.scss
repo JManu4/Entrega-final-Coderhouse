@@ -7,10 +7,8 @@
 @import "./partials/experience";
 @import "./partials/education";
 @import "./partials/footer";
-@import "./partials/skillSite";
-@import "./partials/contactSite";
-@import "./partials/companiesSite";
-@import "./partials/myschool";
 
-
-
+@import "./partials/sitePartials/skillsite";
+@import "./partials/sitePartials/companiessite";
+@import "./partials/sitePartials/myschoolsite";
+@import "./partials/sitePartials/contactsite";

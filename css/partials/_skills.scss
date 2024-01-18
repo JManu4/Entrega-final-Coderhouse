@@ -5,7 +5,7 @@
     font-family: $fontMain;
     padding-block: 4rem;
     h3 {
-        @include subtittles;
+        @include subtitles;
     }
     .skillsCards {
         display: grid;
@@ -60,7 +60,7 @@
     font-family: $fontMain;  
     padding-block: 4rem;
     h3 { 
-        @include subtittles;
+        @include subtitles;
     }
     .softSkillsCards {
         display: flex;
