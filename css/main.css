@@ -200,6 +200,7 @@ body {
 @media (max-width: 991px) {
   .presentacion .presentacionImagen {
     display: flex;
+    z-index: -1;
   }
 }
 
