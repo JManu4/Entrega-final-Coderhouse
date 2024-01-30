@@ -132,7 +132,7 @@ body {
   }
 }
 .presentacion .presentacionTexto .presentacionTextoDown {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 4px;
@@ -159,7 +159,7 @@ body {
 @media (max-width: 991px) {
   .presentacion .presentacionTexto .presentacionTextoDown {
     margin-top: 1rem;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 767px) {
@@ -191,6 +191,12 @@ body {
 .presentacion .presentacionImagen img {
   width: 100%;
 }
+@media (max-width: 991px) {
+  .presentacion .presentacionImagen {
+    display: flex;
+    z-index: -1;
+  }
+}
 @media (max-width: 767px) {
   .presentacion .presentacionImagen {
     opacity: 0;
@@ -198,9 +204,14 @@ body {
   }
 }
 @media (max-width: 991px) {
-  .presentacion .presentacionImagen {
-    display: flex;
-    z-index: -1;
+  .presentacion {
+    margin-top: 5rem;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .presentacion {
+    margin-top: 0;
   }
 }
 
@@ -550,7 +561,6 @@ body {
   }
 }
 
-/* fin 7_experience */
 .educationContainer {
   color: white;
   font-family: "Urbanist", sans-serif;
@@ -578,7 +588,7 @@ body {
   padding: 2.5rem 1rem;
   margin-block: 1rem;
 }
-.educationContainer .educationCards .educationCardsTittle {
+.educationContainer .educationCards .educationCardsTitle {
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -678,19 +688,31 @@ footer .footerSocial img:hover {
 }
 footer .footerLogo {
   text-align: center;
-  padding: 1rem 0 1rem;
+  padding: 1rem 0 2rem;
 }
-footer .footerLogolink {
+footer .footerLogo a {
+  display: block;
   text-decoration: none;
-  color: rgb(201, 201, 201);
-}
-footer .footerLogolink:hover::before {
   color: white;
+  padding-inline: 2rem;
+}
+footer .footerLogo a:first-child:hover::before {
   content: "< ";
 }
-footer .footerLogolink:hover::after {
-  color: white;
+footer .footerLogo a:first-child:hover::after {
   content: " >";
+}
+footer .footerLogo a span {
+  font-style: italic;
+}
+footer .footerLogo a span:hover {
+  color: rgb(181, 41, 41);
+  font-style: normal;
+}
+footer .footerLogo a .arrowLink {
+  color: rgb(181, 41, 41);
+  margin-left: 0.5rem;
+  animation: turnOnRed infinite alternate 1s;
 }
 footer .irArriba {
   font-size: 1.5rem;
@@ -705,7 +727,7 @@ footer .irArriba {
   color: white;
   font-family: "Urbanist", sans-serif;
 }
-.skillDescriptions .skillTittle {
+.skillDescriptions .skillTitle {
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -716,6 +738,7 @@ footer .irArriba {
 .skillDescriptions .skillDescription {
   text-align: center;
   margin-bottom: 4rem;
+  font-size: 1rem;
 }
 .skillDescriptions .skillDesCards {
   height: 500px;
@@ -858,6 +881,29 @@ footer .irArriba {
   }
 }
 
+.companiesHeader {
+  color: white;
+  font-family: "Urbanist", sans-serif;
+}
+.companiesHeader .companiesTitle {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 3rem;
+}
+@media (max-width: 290px) {
+  .companiesHeader .companiesTitle {
+    font-size: 2rem;
+  }
+}
+.companiesHeader .companiesDescription {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 1rem;
+}
+
 .carousel .carouselInfo {
   background-color: rgba(255, 255, 255, 0.442);
   max-width: 30%;
@@ -866,40 +912,32 @@ footer .irArriba {
 }
 
 .schoolImg {
+  display: block;
   width: 100%;
-  height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 1111px) {
-  .schoolImg {
-    height: 500px;
-  }
-}
-@media (max-width: 900px) {
-  .schoolImg {
-    height: 400px;
-  }
-}
-@media (max-width: 666px) {
-  .schoolImg {
-    height: 300px;
-  }
-}
-@media (max-width: 500px) {
-  .schoolImg {
-    height: 250px;
-  }
+  margin: 4rem auto 0;
 }
 
-.schoolDescriptions {
+.schoolIntro {
   color: white;
   font-family: "Urbanist", sans-serif;
 }
-.schoolDescriptions .schoolDescription {
+.schoolIntro .schoolTitle {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.schoolIntro .schoolDescription {
   text-align: center;
   margin: 2rem 0 4rem;
   font-size: 1.5rem;
+}
+@media (max-width: 575px) {
+  .schoolIntro .schoolDescription {
+    font-size: 1.2rem;
+  }
 }
 
 .schoolLocation {
@@ -914,6 +952,7 @@ footer .irArriba {
 }
 .schoolLocation .schoolLocationCont iframe {
   flex: 2;
+  border-radius: 8px;
 }
 @media (max-width: 575px) {
   .schoolLocation .schoolLocationCont iframe {
@@ -929,13 +968,15 @@ footer .irArriba {
   justify-content: center;
   gap: 2rem;
 }
-.schoolLocation .schoolLocationCont .schoolLocationTx h4 {
+.schoolLocation .schoolLocationCont .schoolLocationTx h2 {
+  font-size: 1.5rem;
   color: rgb(181, 41, 41);
 }
 @media (max-width: 575px) {
   .schoolLocation .schoolLocationCont {
     flex-direction: column;
     padding-inline: 1rem;
+    text-align: center;
   }
 }
 
@@ -944,7 +985,7 @@ footer .irArriba {
   margin-block: 4rem;
   font-family: "Urbanist", sans-serif;
 }
-.schoolCareers h3 {
+.schoolCareers h2 {
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -1025,12 +1066,13 @@ footer .irArriba {
 .contactMe .contactMeCard .contactTextUp {
   margin-bottom: 4rem;
 }
-.contactMe .contactMeCard .contactTextUp .contactTittle {
+.contactMe .contactMeCard .contactTextUp .contactTitle {
   border-bottom: 2px solid rgb(181, 41, 41);
   display: inline-block;
-}
-.contactMe .contactMeCard .contactTextUp p {
-  font-size: 0.8rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
 }
 .contactMe .contactMeCard form .inputData {
   overflow: hidden;
@@ -1111,7 +1153,7 @@ footer .irArriba {
   background-color: rgba(236, 0, 0, 0.6);
   color: white;
   border-radius: 5px;
-  padding: 6px;
+  padding: 6px 12px;
   margin: 4rem 2rem 0 0;
 }
 .contactMe .contactMeCard form .botones input[type=reset] {
@@ -1133,5 +1175,8 @@ footer .irArriba {
     row-gap: 2rem;
     -moz-column-gap: 0;
          column-gap: 0;
+  }
+  .contactMe .contactMeCard .contactSocial a {
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

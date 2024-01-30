@@ -12,17 +12,18 @@
         padding: 2rem;
         background-color: rgba(255, 255, 255, 0.124);
         max-width: 60%;
-        @media (max-width: 666px) {
+        @media ( max-width: 666px ) {
             padding: 1rem;
             max-width: 90%;
         }
         .contactTextUp{
             margin-bottom: 4rem;
-            .contactTittle {
-                border-bottom: 2px solid $redMain;
+            .contactTitle {
+                border-bottom: 2px solid $redMain ;
                 display: inline-block;
+                @include subtitles;
+                font-size: 3rem;
             }
-            p { font-size: 0.8rem; }
         }
         form {
             .inputData {
@@ -66,7 +67,7 @@
                         color: white;
                         cursor:text;
                         transition: all 0.2s ease-out;
-                        // z-index:10;
+                        
                     }
                     .underline {
                         content:'';
@@ -83,11 +84,10 @@
             .botones {
                 input[type=submit],input[type=reset] {
                     text-decoration: none;
-                    // outline: none;
                     background-color: rgba(236, 0, 0, 0.6);
                     color: white;
                     border-radius: 5px;
-                    padding: 6px;
+                    padding: 6px 12px;
                     margin: 4rem 2rem 0 0
                 }
                 input[type=reset] { background-color: rgb(139, 139, 139); }
@@ -96,17 +96,18 @@
         .contactSocial {
             margin-top: 4rem;
             display: flex;
-            // justify-content: center;
             gap: 2.9rem;    
             img:hover {
                 transform: scale(1.2);
                 transition: 0.4s;
             }
-            @media (max-width: 400px) {
+            @media ( max-width: 400px ) {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 row-gap: 2rem;
                 column-gap: 0;
+                a { text-align: center; }
+                
             }
         }
 

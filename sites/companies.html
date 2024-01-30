@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JMGA-Companies</title>
+    <title>Companies - JMGA</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Urbanist:wght@100;300;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <meta name="description" content="Worked in big international companies with high skilled teams around the world">
     <meta name="keywords" content="Linux Admin, Linux, Network security, Linux servers, Shell Scripting, Server Administration, Cloud, Tasks automation, Deployment and maintenance, Linux problem solving, Sysadmin, IT engineer, Cloud Computing, Linux support">
 </head>
 <body>
-
+  <!-- Start header -->
   <header>          
     <nav class="navbar navbar-expand-sm">
       <div class="navBarMenu">
@@ -40,8 +42,13 @@
       </div>
     </nav>
   </header>
-
+  <!-- End header -->
   <main>
+    <!-- Start companies carousel -->
+    <section class="companiesHeader container">
+      <h1 class="companiesTitle" data-aos="fade-zoom-in" data-aos-duration="2500">Companies</h1>
+      <h2 class="companiesDescription" data-aos="fade-zoom-in" data-aos-duration="3000">These are all companies where I have worked.</h2>
+    </section>
     <div id="carouselExampleCaptions" class="carousel slide">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -75,7 +82,7 @@
         <div class="carousel-item">
           <img src="../images/company2.jpeg" class="d-block w-100" alt="Company Dextra image">
           <div class="carousel-caption d-none d-md-block carouselInfo">
-            <h5>Change management</h5>
+            <h5>Change Management</h5>
             <p>February 2018</p>
           </div>
         </div>
@@ -96,10 +103,12 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <!-- End companies carousel -->
   </main>
   
   <p class="mayorQue3"> < \ > </p>
 
+  <!-- Start footer -->
   <footer>  
     <div class="containerfooterLink">
       <ul class="footerLinkLista">
@@ -126,7 +135,10 @@
       <a class="footerLogolink" href="#">&#160; &#160; J M G A &#160; | &#160; 1 9 9 2 &#160; | &#160; Not a company, Inc &#160; &#160;</a>
     </div>  
   </footer>
+  <!-- End footer -->
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>

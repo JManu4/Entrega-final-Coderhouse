@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JMGA-Contact</title>
+    <title>Contact - JMGA</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Urbanist:wght@100;300;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <meta name="description" content="Let's work together.">
     <meta name="keywords" content="Linux Admin, Linux, Network security, Linux servers, Shell Scripting, Server Administration, Cloud, Tasks automation, Deployment and maintenance, Linux problem solving, Sysadmin, IT engineer, Cloud Computing, Linux support">
 </head>
 <body>
-
+  <!-- Start header -->
   <header>          
     <nav class="navbar navbar-expand-sm" >
       <div class="navBarMenu">
@@ -40,13 +42,14 @@
       </div>
     </nav>
   </header>
-
+  <!-- End header -->
   <main>
+    <!-- Start contact me -->
     <section class="contactMe">
       <div class="contactMeCard container">
         <div class="contactTextUp">
-          <h3 class="contactTittle" ata-aos="fade-zoom-in" data-aos-duration="2500">Contact me</h3>
-          <p>Deja tus datos abajo para contarte. <br> También encontraras mi información de contacto</p>
+          <h1 class="contactTitle" data-aos="fade-zoom-in" data-aos-duration="2500">Contact me</h1>
+          <p data-aos="fade-zoom-in" data-aos-duration="2500">Leave your contact information to reach out. <br> You will also find my contact data</p>
         </div>
         <form action="./form.php" method="get" enctype="">
           <div class="inputData">
@@ -71,8 +74,8 @@
             </div>
           </div>
           <div class="botones">
-            <input type="submit" value="Haz contacto">
-            <input type="reset" value="Resetear forma">
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
           </div>
         </form>
         <div class="contactSocial">
@@ -91,9 +94,11 @@
         </div>
       </div>
     </section>
+    <!-- End contact me -->
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>

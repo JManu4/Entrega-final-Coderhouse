@@ -1,12 +1,10 @@
-// Inicia skilss
+// Start skilss
 .skills {
     background-color: $blackMain;
     color: white;
     font-family: $fontMain;
     padding-block: 4rem;
-    h3 {
-        @include subtitles;
-    }
+    h3 { @include subtitles; }
     .skillsCards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -28,10 +26,8 @@
             padding: 1.5rem 1rem;
             p { margin-bottom: 0; }
         }
-        @media (max-width: 767px){
-            gap: 1rem;
-        }
-        @media (max-width: 666px){
+        @media ( max-width: 767px ) { gap: 1rem; }
+        @media ( max-width: 666px ) {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(7, 1fr);
             grid-template-areas: 
@@ -52,16 +48,14 @@
         }
     }
 }
-// Fin skills
+// End skills
 
-// Inicia soft_skills
+// Start soft_skills
 .softSkills {
     color: white;
     font-family: $fontMain;  
     padding-block: 4rem;
-    h3 { 
-        @include subtitles;
-    }
+    h3 { @include subtitles; }
     .softSkillsCards {
         display: flex;
         gap: 1rem;
@@ -80,4 +74,4 @@
         }
     }
 }
-// Fin soft_skills
+// End soft_skills

@@ -10,11 +10,14 @@ $yellowNeon: #FFD913;
 $orangeNeon: #FF9C55;
 $redNeon: #FF5555;
 
-
-
-
 @mixin subtitles {
     font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+@mixin redArrows {
+    color: $redMain;
+    margin-left: 0.5rem;
+    animation: turnOnRed infinite alternate 1s ;
 }

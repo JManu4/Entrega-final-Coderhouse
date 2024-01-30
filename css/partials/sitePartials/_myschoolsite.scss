@@ -1,20 +1,22 @@
 .schoolImg {
-    width: 100%;    
-    height: 600px;
-    object-fit: cover;
-    @media (max-width: 1111px) { height: 500px; }
-    @media (max-width: 900px) { height: 400px; }
-    @media (max-width: 666px) { height: 300px; }
-    @media (max-width: 500px) { height: 250px; }
+    display: block; 
+    width: 100%;
+    margin: 4rem auto 0;
 }
-.schoolDescriptions {
+.schoolIntro {
     color: white;
     font-family: $fontMain;
-
+    .schoolTitle {
+        @include subtitles;
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 3rem;
+    }
     .schoolDescription {
         text-align: center;
         margin: 2rem 0 4rem;
         font-size: 1.5rem;
+        @media ( max-width: 575px ) { font-size: 1.2rem; }
     }
 }
 .schoolLocation {
@@ -27,7 +29,8 @@
         padding: 4rem 0 4rem;
         iframe {
             flex: 2;
-            @media (max-width: 575px) { width: 100%; }
+            border-radius: 8px;
+            @media ( max-width: 575px ) { width: 100%; }
         }
         .schoolLocationTx {
             font-family: $fontMain;
@@ -37,11 +40,12 @@
             flex-direction: column;
             justify-content: center;
             gap: 2rem;
-            h4 { color: $redMain; }
+            h2 { font-size: 1.5rem; color: $redMain; }
         }
-        @media (max-width: 575px) {
+        @media ( max-width: 575px ) {
             flex-direction: column;
             padding-inline: 1rem;
+            text-align: center;
         }
     }
 }
@@ -49,9 +53,7 @@
     color: white;
     margin-block: 4rem;
     font-family: $fontMain;
-    h3 {
-        @include subtitles;
-    }
+    h2 { @include subtitles; }
     .schoolCards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -62,7 +64,7 @@
         "schoolCard1 schoolCard2 schoolCard3 schoolCard4"
         "schoolCard5 schoolCard6 schoolCard7 schoolCard8"
         ;
-        @media (max-width: 767px) {
+        @media ( max-width: 767px ) {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr;
             column-gap: 1rem;
@@ -83,8 +85,6 @@
         background-color: rgba(255, 255, 255, 0.124);
         padding: 2rem 1rem;
         border-radius: 8px;
-        i {
-            color: $redMain;
-        }
+        i { color: $redMain; }
     }
 }

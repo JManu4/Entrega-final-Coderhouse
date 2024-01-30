@@ -1,4 +1,4 @@
-// Inicia experience_summary
+// Start experience_summary
 .experienceSummary {
     color: white;
     background-color: $blackMain;
@@ -51,7 +51,7 @@
                 grid-area: experienceSummaryCard#{$var2}; 
             }
         }
-        @media (max-width: 767px){
+        @media ( max-width: 767px ) {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr;
             grid-template-areas:
@@ -61,7 +61,7 @@
             ".                      experienceSummaryCard5"
             ;
         }
-        @media (max-width: 450px){
+        @media ( max-width: 450px ) {
             display: flex;
             flex-direction: column;
             --bs-gutter-x: 0;
@@ -70,18 +70,15 @@
 
     }
 }
-// Fin experience_summary
+// End experience_summary
 
-
-// Inicia experience
+// Start experience
 .experienceSection {
     color: white;
     background-color: $blackMain;
     font-family: $fontMain;
     padding-block: 4rem;
-    h3 {
-        @include subtitles;
-    }
+    h3 { @include subtitles; }
     .experienceContainer {
         padding-top: 2rem;
         display: flex;
@@ -138,9 +135,7 @@
                     -40px -40px 0 -3px $background, -40px -40px $primaryNeon;
                 }
             }
-            @media (max-width: 767px) {
-                display: none;
-            }
+            @media ( max-width: 767px ) { display: none; }
         }
         .experienceCards {
             flex: 3;
@@ -166,18 +161,14 @@
                     top: -10px;
                     opacity: 0;
 
-                    @media (max-width: 991px) {
+                    @media ( max-width: 991px ) {
                         border: 1px solid $primaryNeon;
                         padding: 0.1rem 0.8rem;
                         top: -22px;
                         right: 0;
                     }
                 }
-                .arrowDown {
-                    color: $redMain;
-                    margin-left: 0.5rem;
-                    animation: turnOnRed infinite alternate 1s ;
-                }
+                .arrowDown { @include redArrows; }
                 .arrowUp {
                     color: rgb(134, 134, 234);
                     margin-left: 0.5rem;
@@ -206,8 +197,6 @@
                     0% { opacity: 0; }
                     100%{ opacity: 1; color: rgb(134, 134, 234); }
                 }
-
-
                 input:checked ~ .experienceCardDates {
                     animation: showUpDates 1s forwards 0.5s;
                 }
@@ -223,7 +212,7 @@
                 }
             }
         }
-        @media (max-width: 575px) { padding-inline: 2rem; }
+        @media ( max-width: 575px ) { padding-inline: 2rem; }
     }
 }
-/* fin 7_experience */
+// End experience

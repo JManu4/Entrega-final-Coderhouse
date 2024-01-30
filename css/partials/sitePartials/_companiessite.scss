@@ -1,3 +1,21 @@
+.companiesHeader {
+    color: white;
+    font-family: $fontMain;
+    .companiesTitle {
+        @include subtitles;
+        margin-top: 4rem;
+        text-align: center;
+        font-size: 3rem;
+        @media ( max-width: 290px ) {
+            font-size: 2rem;
+        }
+    }
+    .companiesDescription {
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 1rem;
+    }
+}
 .carousel {
     .carouselInfo {
         background-color: rgba(255, 255, 255, 0.442);

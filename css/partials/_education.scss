@@ -2,9 +2,7 @@
     color: white;
     font-family: $fontMain;
     display: flex;
-    h3 {
-        @include subtitles;
-    }
+    h3 { @include subtitles; }
     .educationCerts {
         flex: 1;
         display: flex;
@@ -21,7 +19,7 @@
         width: 80%;
         padding: 2.5rem 1rem;
         margin-block: 1rem;
-        .educationCardsTittle {
+        .educationCardsTitle {
             font-weight: bold;
             font-size: 1.3rem;
         }
@@ -31,7 +29,6 @@
     }
     .educationCardBlack {
         background: linear-gradient(rgb(35, 61, 62),rgb(10, 24, 25));
-        
         .avance {
             background: rgba(255,255,255,0.1);
             position: relative;
@@ -59,7 +56,7 @@
             }
         }
     }
-    @media (max-width: 575px) {
+    @media ( max-width: 575px ) {
         flex-direction: column;
         gap: 2rem;
     }
